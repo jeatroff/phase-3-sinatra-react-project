@@ -1,22 +1,38 @@
-import logo from './logo.svg';
 import './App.css';
+import React, {useState, useEffect} from "react";
+import PersonDetail from './PersonDetail';
+import ConcertList from './ConcertList';
+import PurchaseConcert from './PurchaseConcert';
 
 function App() {
+
+  const [personList, setPersonList] = useState([])
+  const [concertList, setConcertList] = useState([])
+
+  useEffect(() => {
+    fetch("http://localhost:3000/concerts")
+      .then(resp => resp.json())
+      .then(setConcertList)
+    fetch("http://localhost:3000/persons")
+      .then(resp => resp.json())
+      .then(setPersonList)
+  }, [])
+
+  function buyConcert(newConcert) {
+    setConcertList([...concertList, newConcert])
+  }
+
+  function showPerson(personName) {
+    const selectPerson = personList.filter((person) => (person.Name === personName))
+    setPersonList(selectPerson[0].list)
+  }
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <PersonDetail personList={personList} showPerson={showPerson}/>
+      <ConcertList concertList={concertList}/>
+      <PurchaseConcert buyConcert={buyConcert}/>
       </header>
     </div>
   );
