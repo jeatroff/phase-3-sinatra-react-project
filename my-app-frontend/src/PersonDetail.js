@@ -2,11 +2,7 @@ import React from "react";
 
 function PersonDetail({ personList, showPerson }) {
 
- function refundTicket(){
-    fetch(`http://localhost:3000/persons/purchased/${id}`, {
-        method: "Delete",
-    })
- }
+
   return (
     <div>
       <header>
@@ -17,7 +13,7 @@ function PersonDetail({ personList, showPerson }) {
             ))}
           </select>
         </p>
-        <button onClick={refundTicket}>X</button>
+        
       </header>
     </div>
   );

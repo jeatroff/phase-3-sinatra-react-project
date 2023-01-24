@@ -4,12 +4,12 @@ class ApplicationController < Sinatra::Base
   # Add your routes here
   get "/users" do
     users = User.all
-    user.to_json(include: :tickets)
+    users.to_json(include: :tickets)
   end
 
   get "/concerts" do
     concerts = Concert.all
-    concert.to_json
+    concerts.to_json
   end
 
   post '/users' do
