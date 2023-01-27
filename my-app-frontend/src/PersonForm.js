@@ -34,8 +34,8 @@ function PersonForm({addPerson}) {
         e.target.reset()
     }
     return (
-        <div>
-            <form className="new-person-form" onSubmit={handleSubmit}>
+        <div className="form">
+            <form onSubmit={handleSubmit}>
                 <input placeholder="Full Name" onChange={(e) => setNewName(e.target.value)} />
                 <input placeholder="Email" onChange={(e) => setNewEmail(e.target.value)} />
                 <input placeholder="Password" onChange={(e) => setNewPassword(e.target.value)} />

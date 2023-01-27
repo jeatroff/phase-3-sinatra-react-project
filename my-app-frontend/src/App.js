@@ -37,6 +37,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+      <h1 className="Title">Ready for Fun</h1>
       <PersonDetail personList={personList} showPerson={showPerson}/>
       <PersonForm addPerson={addPerson}/>
       <PurchasedTickets currentPerson={currentPerson} concertList={concertList} setConcertList={setConcertList}setCurrentPerson={setCurrentPerson}/>

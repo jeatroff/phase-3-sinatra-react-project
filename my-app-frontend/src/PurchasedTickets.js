@@ -40,7 +40,7 @@ function PurchasedTickets({currentPerson, concertList, setConcertList, setCurren
 
     return (
         <div>
-            <div>Purchased Tickets:
+            <div className="purchaseticket">Purchased Tickets:
                 {currentPerson.tickets.map((ticket) => (
                     <p>
                         Artist: {concertList.filter((concert) => (concert.id === ticket.concert_id))[0].artist}, 

@@ -5,13 +5,16 @@ body {
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-image: url(./img/autumn-studio-221wufG10eg-unsplash.jpg);
+    background-image: url(./img/white-trianglify-b79c7e1f.jpg);
     background-color: #fff;
     background-repeat: no-repeat;
     background-origin: border-box;
-    background-position: center center;
+    /* background-position: center center; */
     background-size: cover;
     background-attachment: scroll;
+    scroll-behavior: smooth;
+    text-align: center;
+
    }
 
 code {
