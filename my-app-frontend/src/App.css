@@ -23,6 +23,50 @@
     color: white;
   }
   
-  .App-link {
+.App-link {
     color: #61dafb;
   }
+
+.Title {
+    color: #69061b;
+    background-image:url(./img/yvette-de-wit-NYrVisodQ2M-unsplash.jpg);
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: scroll;
+    width:1200px;
+    height:400px;
+}
+
+.SelectProfile {
+    color: #390767;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+.purchaseticket {
+    color: #767eee;
+    border: 5px solid #767eee;
+    padding: 15px;
+  
+}
+
+.availableticket {
+    color: #e00707;
+    border: 5px solid #e00707;
+    padding-top: 15px;
+    padding-bottom:15px;
+    padding-left: 51px;
+    padding-right: 51px;
+}
+
+form{
+    padding-bottom: 40px;
+    margin-left: 30%;
+    margin-right: 30%;
+    width: 40%;
+    
+}

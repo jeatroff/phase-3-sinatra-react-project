@@ -52,16 +52,16 @@ function ConcertList({concertList, currentPerson, setConcertList, setCurrentPers
 
     return (
     <div>
-        <ul>
+        <div className="availableticket">
             Available Tickets:
             {concertList.map((concert) => (
-            <li>
+            <p>
                 Artist: {concert.artist}, 
                 Date: {concert.date}, 
                 Ticket Left: {concert.unsold_tickets} ==>
                 <button type="click" onClick={(e) => handlePurchase(concert)}>Purchase</button>
-            </li>))}
-        </ul>
+            </p>))}
+        </div>
     </div>
     );
   }
